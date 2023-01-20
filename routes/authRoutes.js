@@ -58,7 +58,7 @@ router.post("/signin", async (req, res) => {
 
     const {password,...otherData} = User._doc
 
-     const accessToken = jwt.sign({id: User._id, isAdmin : User.isAdmin},process.env.JWT_KEY,{expiresIn:"3d"});
+     const accessToken = jwt.sign({id: User._id, isAdmin : User.isAdmin},process.env.JWT_KEY,{expiresIn:"30d"});
 
     res.status(200).json({...otherData,accessToken})
   
@@ -66,7 +66,7 @@ router.post("/signin", async (req, res) => {
     
 
   } catch (err) {
-     console.log(err)
+     res.status(500).json(err);
   }
 
   console.log("Sign in route working");

@@ -4,7 +4,7 @@
   "description": "This is a netflix  server using MERN stack",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "keywords": [
     "vijaynetflix"
@@ -12,6 +12,7 @@
   "author": "vijay",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "crypto-js": "^4.1.1",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",

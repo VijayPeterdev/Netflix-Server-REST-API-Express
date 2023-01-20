@@ -2,14 +2,16 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+const cors = require("cors");
 
+app.use(cors());
 app.use(express.json());
 const authRoutes = require("./routes/authRoutes.js");
 const userRoutes = require("./routes/userRoutes.js")
 const movieRouter = require("./routes/movieRoutes.js")
 const movieListRouter = require('./routes/movielistRoutes.js')
 
-// Password Securitys
+// Password Security
 dotenv.config();
 
 // Json Read Middleware
