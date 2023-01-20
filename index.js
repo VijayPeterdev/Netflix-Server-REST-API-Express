@@ -14,6 +14,13 @@ const movieListRouter = require('./routes/movielistRoutes.js')
 // Password Security
 dotenv.config();
 
+
+// Home Route Test Added
+
+app.get("/",(req,res) => {
+    res.send("Netflix Server Working")
+})
+
 // Json Read Middleware
 
 
